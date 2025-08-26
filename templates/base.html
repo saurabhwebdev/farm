@@ -512,7 +512,10 @@
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 GreenFarm. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p>&copy; 2025 GreenFarm. All rights reserved. | 
+                    <a href="{{ url_for('privacy_policy') }}" class="hover:text-white transition-colors">Privacy Policy</a> | 
+                    <a href="{{ url_for('terms_of_service') }}" class="hover:text-white transition-colors">Terms of Service</a>
+                </p>
             </div>
         </div>
     </footer>

@@ -69,6 +69,14 @@ def contact():
         return redirect(url_for('contact'))
     return render_template('contact.html', form=form)
 
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+@app.route('/terms-of-service')
+def terms_of_service():
+    return render_template('terms_of_service.html')
+
 @app.route('/api/quote', methods=['POST'])
 def api_quote():
     """API endpoint for quote requests"""
