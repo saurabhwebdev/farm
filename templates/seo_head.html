@@ -1,0 +1,226 @@
+<!-- SEO Meta Tags Component -->
+{% set page_seo = seo or {} %}
+{% set default_title = "GreenFarm - Premium Organic Solutions" %}
+{% set default_description = "Leading provider of premium organic farming solutions, fertilizers, and sustainable agriculture products. Transform your farm with our eco-friendly, scientifically-proven organic solutions." %}
+{% set default_keywords = "organic farming, organic fertilizer, sustainable agriculture, bio pesticides, soil conditioner, farm solutions, eco-friendly farming" %}
+
+<!-- Basic Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="index, follow">
+
+<!-- Title and Description -->
+<title>{{ page_seo.title or default_title }}</title>
+<meta name="description" content="{{ page_seo.description or default_description }}">
+<meta name="keywords" content="{{ page_seo.keywords or default_keywords }}">
+<meta name="author" content="{{ seo_config.site_author }}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ page_seo.canonical_url or seo_config.site_url }}">
+
+<!-- Language and Locale -->
+<meta name="language" content="en-US">
+<meta http-equiv="content-language" content="en-US">
+
+<!-- Open Graph Meta Tags (Facebook) -->
+<meta property="og:title" content="{{ page_seo.title or default_title }}">
+<meta property="og:description" content="{{ page_seo.description or default_description }}">
+<meta property="og:type" content="{{ page_seo.page_type or 'website' }}">
+<meta property="og:url" content="{{ page_seo.canonical_url or seo_config.site_url }}">
+<meta property="og:site_name" content="{{ seo_config.site_name }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="{{ page_seo.og_image or (seo_config.site_url + '/static/images/greenfarm-og-image.jpg') }}">
+<meta property="og:image:alt" content="{{ page_seo.title or default_title }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{{ seo_config.twitter_handle }}">
+<meta name="twitter:creator" content="{{ seo_config.twitter_handle }}">
+<meta name="twitter:title" content="{{ page_seo.title or default_title }}">
+<meta name="twitter:description" content="{{ page_seo.description or default_description }}">
+<meta name="twitter:image" content="{{ page_seo.og_image or (seo_config.site_url + '/static/images/greenfarm-twitter-image.jpg') }}">
+<meta name="twitter:image:alt" content="{{ page_seo.title or default_title }}">
+
+<!-- Product-specific Open Graph (for product pages) -->
+{% if page_seo.page_type == 'product' and page_seo.product_price %}
+<meta property="product:price:amount" content="{{ page_seo.product_price }}">
+<meta property="product:price:currency" content="{{ page_seo.product_currency or 'USD' }}">
+<meta property="product:availability" content="in stock">
+<meta property="product:condition" content="new">
+<meta property="product:retailer_item_id" content="{{ page_seo.product_id or '' }}">
+{% endif %}
+
+<!-- Business/Organization Meta Tags -->
+<meta name="geo.region" content="US-CA">
+<meta name="geo.placename" content="Green Valley">
+<meta name="geo.position" content="34.052235;-118.243685">
+<meta name="ICBM" content="34.052235, -118.243685">
+
+<!-- App-specific Meta Tags -->
+<meta name="application-name" content="GreenFarm">
+<meta name="msapplication-TileColor" content="#22c55e">
+<meta name="theme-color" content="#22c55e">
+
+<!-- Preconnect for Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+<!-- DNS Prefetch for External Resources -->
+<link rel="dns-prefetch" href="https://unpkg.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+<!-- Favicon and App Icons -->
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+
+<!-- Additional SEO Enhancement Tags -->
+<meta name="rating" content="general">
+<meta name="revisit-after" content="7 days">
+<meta name="expires" content="never">
+<meta name="distribution" content="global">
+<meta name="coverage" content="worldwide">
+<meta name="target" content="all">
+<meta name="audience" content="all">
+<meta name="resource-type" content="document">
+<meta name="classification" content="business">
+<meta name="category" content="agriculture, farming, organic products">
+
+<!-- Rich Snippets Preparation -->
+<meta name="publisher" content="GreenFarm">
+<meta name="copyright" content="© 2025 GreenFarm. All rights reserved.">
+
+<!-- Structured Data (JSON-LD) -->
+{% if structured_data %}
+<script type="application/ld+json">
+{{ structured_data | safe }}
+</script>
+{% endif %}
+
+<!-- Additional Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GreenFarm",
+  "url": "{{ seo_config.site_url }}",
+  "logo": "{{ seo_config.site_url }}/static/images/greenfarm-logo.png",
+  "description": "{{ seo_config.site_description }}",
+  "foundingDate": "2020",
+  "numberOfEmployees": "50-100",
+  "industry": "Agriculture",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Farm Road",
+    "addressLocality": "Green Valley",
+    "addressRegion": "CA",
+    "postalCode": "90210",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ seo_config.company_phone }}",
+    "contactType": "customer service",
+    "email": "{{ seo_config.company_email }}",
+    "availableLanguage": ["English"],
+    "areaServed": "US"
+  },
+  "sameAs": [
+    "https://twitter.com/{{ seo_config.twitter_handle }}",
+    "https://facebook.com/{{ seo_config.facebook_page }}",
+    "https://linkedin.com/company/greenfarm",
+    "https://youtube.com/c/greenfarm"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Organic Farming Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Organic Fertilizers",
+          "category": "Agricultural Supplies"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Bio Pesticides",
+          "category": "Agricultural Supplies"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Soil Conditioners",
+          "category": "Agricultural Supplies"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- WebSite Schema for Search Box -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "{{ seo_config.site_url }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ seo_config.site_url }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Breadcrumb Schema (when applicable) -->
+{% if breadcrumbs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for crumb in breadcrumbs %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": "{{ crumb.name }}",
+      "item": "{{ crumb.url }}"
+    }{{ "," if not loop.last }}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<!-- Performance and Analytics Preparation -->
+<!-- Google Analytics 4 (GA4) - Replace with your actual tracking ID -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+-->
+
+<!-- Google Search Console Verification - Replace with your actual verification code -->
+<!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
+
+<!-- Bing Webmaster Tools Verification - Replace with your actual verification code -->
+<!-- <meta name="msvalidate.01" content="YOUR_VERIFICATION_CODE"> -->
+
+<!-- Yandex Webmaster Verification - Replace with your actual verification code -->
+<!-- <meta name="yandex-verification" content="YOUR_VERIFICATION_CODE"> -->
