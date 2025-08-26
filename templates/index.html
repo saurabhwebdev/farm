@@ -1,0 +1,554 @@
+{% extends "base.html" %}
+
+{% block title %}GreenFarm - Premium Organic Solutions{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+             alt="Lush green farm field" 
+             class="w-full h-full object-cover">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-900/50 to-primary-700/30"></div>
+    </div>
+    
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+        </svg>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Hero Text -->
+            <div class="text-center lg:text-left animate-fade-in">
+                <h1 class="text-5xl lg:text-7xl font-bold font-serif mb-6 text-white">
+                    <span class="text-accent-400">Premium</span><br>
+                    <span class="text-white">Organic</span><br>
+                    <span class="text-gray-200">Solutions</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl">
+                    Transform your agricultural potential with our cutting-edge organic farming solutions. 
+                    Sustainable, effective, and environmentally conscious.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <button class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-primary-600 hover:to-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                        Get Started Today
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-primary-600 transition-all duration-200">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-8 mt-12 text-center lg:text-left">
+                    <div>
+                        <div class="text-3xl font-bold text-accent-400">500+</div>
+                        <div class="text-gray-300">Happy Farmers</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-accent-400">10k+</div>
+                        <div class="text-gray-300">Acres Served</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-accent-400">95%</div>
+                        <div class="text-gray-300">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Image/Animation -->
+            <div class="relative animate-slide-up">
+                <div class="relative z-10">
+                    <!-- Glassy Container with Farm Image -->
+                    <div class="w-full h-96 lg:h-[500px] glass-morphism rounded-3xl overflow-hidden shadow-2xl border border-white/30 backdrop-blur-xl">
+                        <!-- Farm Image -->
+                        <div class="relative w-full h-full">
+                            <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Modern sustainable farming" 
+                                 class="w-full h-full object-cover opacity-80">
+                            <!-- Inner Glass Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-sm"></div>
+                            <!-- Content Over Image -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center p-8 relative">
+                                    <!-- Floating Ecosystem Icons -->
+                                    <div class="relative w-32 h-32 mx-auto mb-6">
+                                        <!-- Central Core -->
+                                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/25 backdrop-blur-lg rounded-3xl flex items-center justify-center border border-white/40 shadow-2xl animate-pulse">
+                                            <svg class="w-10 h-10 text-white drop-shadow-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                            </svg>
+                                        </div>
+                                        
+                                        <!-- Orbiting Elements -->
+                                        <div class="absolute inset-0 animate-spin" style="animation-duration: 20s;">
+                                            <!-- Leaf Icon -->
+                                            <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-green-400/30 backdrop-blur-md rounded-2xl flex items-center justify-center border border-green-300/50 shadow-lg">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="absolute inset-0 animate-spin" style="animation-duration: 15s; animation-direction: reverse;">
+                                            <!-- Water Droplet -->
+                                            <div class="absolute top-1/2 -right-2 transform -translate-y-1/2 w-7 h-7 bg-blue-400/30 backdrop-blur-md rounded-2xl flex items-center justify-center border border-blue-300/50 shadow-lg">
+                                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 16.83l3.36-3.36a5 5 0 10-6.72 0L10 16.83z" clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="absolute inset-0 animate-spin" style="animation-duration: 25s;">
+                                            <!-- Seed/Growth -->
+                                            <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-400/30 backdrop-blur-md rounded-2xl flex items-center justify-center border border-yellow-300/50 shadow-lg">
+                                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="absolute inset-0 animate-spin" style="animation-duration: 18s; animation-direction: reverse;">
+                                            <!-- Earth/Soil -->
+                                            <div class="absolute top-1/2 -left-2 transform -translate-y-1/2 w-7 h-7 bg-amber-600/30 backdrop-blur-md rounded-2xl flex items-center justify-center border border-amber-500/50 shadow-lg">
+                                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Dynamic Text Content -->
+                                    <div class="space-y-4">
+                                        <h3 class="text-xl font-bold text-white drop-shadow-2xl relative">
+                                            <span class="inline-block animate-pulse">Sustainable</span>
+                                            <span class="inline-block animate-pulse" style="animation-delay: 0.5s;"> Ecosystem</span>
+                                        </h3>
+                                        <p class="text-sm text-white/95 drop-shadow-lg max-w-xs mx-auto leading-relaxed">
+                                            Where <span class="font-semibold text-green-200">innovation</span> meets 
+                                            <span class="font-semibold text-blue-200">nature</span> in perfect harmony
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Flowing Progress Indicators -->
+                                    <div class="flex justify-center mt-6 space-x-3">
+                                        <div class="flex space-x-1">
+                                            <!-- Wave Animation -->
+                                            <div class="w-1.5 h-1.5 bg-white/70 rounded-full animate-bounce" style="animation-delay: 0s; animation-duration: 1.5s;"></div>
+                                            <div class="w-2 h-2 bg-white/80 rounded-full animate-bounce" style="animation-delay: 0.2s; animation-duration: 1.5s;"></div>
+                                            <div class="w-2.5 h-2.5 bg-white/90 rounded-full animate-bounce" style="animation-delay: 0.4s; animation-duration: 1.5s;"></div>
+                                            <div class="w-2 h-2 bg-white/80 rounded-full animate-bounce" style="animation-delay: 0.6s; animation-duration: 1.5s;"></div>
+                                            <div class="w-1.5 h-1.5 bg-white/70 rounded-full animate-bounce" style="animation-delay: 0.8s; animation-duration: 1.5s;"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Floating Particles -->
+                                    <div class="absolute inset-0 pointer-events-none">
+                                        <div class="absolute top-1/4 left-1/4 w-1 h-1 bg-white/60 rounded-full animate-ping" style="animation-delay: 2s; animation-duration: 3s;"></div>
+                                        <div class="absolute top-3/4 right-1/4 w-1.5 h-1.5 bg-green-300/50 rounded-full animate-ping" style="animation-delay: 4s; animation-duration: 4s;"></div>
+                                        <div class="absolute bottom-1/3 left-1/3 w-1 h-1 bg-blue-300/50 rounded-full animate-ping" style="animation-delay: 6s; animation-duration: 5s;"></div>
+                                        <div class="absolute top-1/3 right-1/3 w-0.5 h-0.5 bg-yellow-300/60 rounded-full animate-ping" style="animation-delay: 1s; animation-duration: 2s;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Floating Elements Inside -->
+                            <div class="absolute top-4 right-4 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute bottom-4 left-4 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enhanced Floating Elements -->
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-accent-400/80 to-accent-500/60 rounded-2xl opacity-90 animate-bounce-slow backdrop-blur-sm border border-white/20 shadow-xl"></div>
+                <div class="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-br from-primary-400/70 to-primary-500/50 rounded-2xl opacity-80 animate-bounce-slow backdrop-blur-sm border border-white/20 shadow-lg" style="animation-delay: 1s"></div>
+                <!-- Additional Modern Elements -->
+                <div class="absolute top-1/2 -left-4 w-8 h-20 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-lg"></div>
+                <div class="absolute top-1/4 -right-2 w-6 h-16 bg-white/15 backdrop-blur-md rounded-full border border-white/20 shadow-lg"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-24 bg-white" x-data x-intersect="$el.classList.add('animate-fade-in')">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold font-serif text-gray-900 mb-6">
+                Why Choose <span class="gradient-text">GreenFarm</span>?
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                We combine decades of agricultural expertise with cutting-edge sustainable practices 
+                to deliver unmatched results for modern farmers.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl card-hover border border-gray-100">
+                <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">100% Organic</h3>
+                <p class="text-gray-600 mb-6">
+                    Our products are certified organic, ensuring the highest quality without harmful chemicals or pesticides.
+                </p>
+                <div class="flex items-center text-primary-600 font-medium">
+                    <span>Learn more</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl card-hover border border-gray-100">
+                <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Fast Results</h3>
+                <p class="text-gray-600 mb-6">
+                    See improvements in soil health and crop yield within the first growing season with our proven formulations.
+                </p>
+                <div class="flex items-center text-primary-600 font-medium">
+                    <span>Learn more</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl card-hover border border-gray-100">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Expert Support</h3>
+                <p class="text-gray-600 mb-6">
+                    Our team of agricultural experts provides ongoing support and consultation to maximize your success.
+                </p>
+                <div class="flex items-center text-primary-600 font-medium">
+                    <span>Learn more</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Preview Section -->
+<section id="products" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold font-serif text-gray-900 mb-6">
+                Premium <span class="gradient-text">Products</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our comprehensive range of organic farming solutions designed to boost productivity and soil health.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl card-hover">
+                <div class="h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Organic Fertilizer</h3>
+                    <p class="text-gray-600 mb-4">Premium blend of natural nutrients to enhance soil fertility and plant growth.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-primary-600">$49.99</span>
+                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl card-hover">
+                <div class="h-48 bg-gradient-to-br from-accent-100 to-accent-200 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Soil Conditioner</h3>
+                    <p class="text-gray-600 mb-4">Advanced formula to improve soil structure and water retention capacity.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-primary-600">$39.99</span>
+                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl card-hover">
+                <div class="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Bio Pesticide</h3>
+                    <p class="text-gray-600 mb-4">Natural pest control solution that's safe for crops and environment.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-primary-600">$59.99</span>
+                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <button class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-primary-600 hover:to-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                View All Products
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials & Video Section -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold font-serif text-gray-900 mb-6">
+                What Our <span class="gradient-text">Farmers</span> Say
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Real success stories from farmers who have transformed their operations with GreenFarm solutions.
+            </p>
+        </div>
+        
+        <!-- Video Testimonials -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <!-- Video 1 -->
+            <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl card-hover">
+                <div class="aspect-video">
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube.com/embed/Vi5iPj2ooaA" 
+                        title="Farm Success Story 1"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6 bg-white">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Organic Farming Success</h3>
+                    <p class="text-gray-600">Discover how sustainable farming practices transformed this operation.</p>
+                </div>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl card-hover">
+                <div class="aspect-video">
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube.com/embed/h9OICUdwHH0" 
+                        title="Farm Success Story 2"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6 bg-white">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Innovative Agriculture</h3>
+                    <p class="text-gray-600">Learn about cutting-edge techniques for modern farming excellence.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Written Testimonials -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8 border border-primary-200 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-accent-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-6 italic">
+                    "GreenFarm's organic solutions increased our crop yield by 40% in just one season. 
+                    The results speak for themselves!"
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-lg">JM</span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900">John Martinez</h4>
+                        <p class="text-gray-600 text-sm">Organic Vegetable Farm, CA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="bg-gradient-to-br from-accent-50 to-accent-100 rounded-2xl p-8 border border-accent-200 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-accent-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-6 italic">
+                    "The soil conditioner transformed our heavy clay soil into rich, productive farmland. 
+                    Amazing transformation!"
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-lg">SC</span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900">Sarah Chen</h4>
+                        <p class="text-gray-600 text-sm">Sustainable Farm, TX</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-accent-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-6 italic">
+                    "Expert support and high-quality products make GreenFarm our go-to partner for 
+                    sustainable agriculture solutions."
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-lg">MT</span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900">Mike Thompson</h4>
+                        <p class="text-gray-600 text-sm">Green Valley Ranch, FL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Row -->
+        <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 mt-16 text-white text-center">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-3xl font-bold mb-2">4.9/5</div>
+                    <div class="text-primary-100">Customer Rating</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold mb-2">98%</div>
+                    <div class="text-primary-100">Satisfaction Rate</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold mb-2">50+</div>
+                    <div class="text-primary-100">Video Testimonials</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold mb-2">24/7</div>
+                    <div class="text-primary-100">Expert Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section id="contact" class="py-24 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl lg:text-5xl font-bold font-serif mb-6">
+            Ready to Transform Your Farm?
+        </h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+            Join thousands of successful farmers who have revolutionized their agricultural practices with GreenFarm solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="bg-white text-primary-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                Get Free Consultation
+            </button>
+            <button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-primary-600 transition-all duration-200">
+                Call: +1 (555) 123-4567
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}

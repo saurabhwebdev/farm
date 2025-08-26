@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - GreenFarm{% endblock %}
+
+{% block content %}
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- 404 Animation -->
+        <div class="mb-8">
+            <div class="relative">
+                <h1 class="text-9xl lg:text-[12rem] font-bold text-primary-200 select-none">404</h1>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <svg class="w-24 h-24 text-primary-600 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.996-.833-2.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Error Message -->
+        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-serif">
+            Oops! Page Not Found
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto">
+            The page you're looking for seems to have wandered off like a lost sheep in our digital farm. 
+            Don't worry, we'll help you find your way back!
+        </p>
+        
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="{{ url_for('home') }}" 
+               class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-primary-600 hover:to-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                Back to Home
+            </a>
+            <a href="{{ url_for('contact') }}" 
+               class="border-2 border-primary-500 text-primary-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-primary-50 transition-all duration-200">
+                Contact Support
+            </a>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-md mx-auto">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Search for what you need</h3>
+            <div class="flex">
+                <input type="text" placeholder="Search products, pages..." 
+                       class="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors">
+                <button class="bg-primary-500 text-white px-6 py-3 rounded-r-lg hover:bg-primary-600 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="mt-12">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Pages</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="{{ url_for('home') }}" class="text-primary-600 hover:text-primary-700 font-medium">Home</a>
+                <a href="{{ url_for('about') }}" class="text-primary-600 hover:text-primary-700 font-medium">About</a>
+                <a href="{{ url_for('products') }}" class="text-primary-600 hover:text-primary-700 font-medium">Products</a>
+                <a href="{{ url_for('contact') }}" class="text-primary-600 hover:text-primary-700 font-medium">Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

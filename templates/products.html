@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% block title %}Products - GreenFarm{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+             alt="Modern agricultural products and farming technology" 
+             class="w-full h-full object-cover">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-45"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-900/70 to-primary-600/50"></div>
+    </div>
+    
+    <!-- Dynamic Floating Elements -->
+    <div class="absolute inset-0">
+        <!-- Product Icons Floating -->
+        <div class="absolute top-1/4 left-1/6 w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30 animate-bounce" style="animation-duration: 4s;">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+        </div>
+        
+        <div class="absolute top-1/3 right-1/5 w-14 h-14 bg-accent-400/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/25 animate-bounce" style="animation-duration: 3.5s; animation-delay: 1s;">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+            </svg>
+        </div>
+        
+        <div class="absolute bottom-1/4 left-1/4 w-12 h-12 bg-blue-400/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30 animate-bounce" style="animation-duration: 5s; animation-delay: 2s;">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+            </svg>
+        </div>
+        
+        <!-- Animated Grid Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <defs>
+                    <pattern id="productGrid" width="12" height="12" patternUnits="userSpaceOnUse">
+                        <rect width="1" height="1" x="0" y="0" fill="currentColor" opacity="0.3">
+                            <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite"/>
+                        </rect>
+                        <rect width="1" height="1" x="6" y="6" fill="currentColor" opacity="0.3">
+                            <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" begin="2s" repeatCount="indefinite"/>
+                        </rect>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#productGrid)"/>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+        <h1 class="text-5xl lg:text-6xl font-bold font-serif mb-6 animate-fade-in">
+            <span class="text-white drop-shadow-2xl">Our</span>
+            <span class="text-accent-300 drop-shadow-2xl"> Products</span>
+        </h1>
+        <p class="text-xl lg:text-2xl max-w-3xl mx-auto text-gray-200 drop-shadow-lg animate-slide-up">
+            Discover our comprehensive range of premium organic farming solutions designed to maximize your agricultural success.
+        </p>
+        
+        <!-- Product Categories Preview -->
+        <div class="grid grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto">
+            <div class="text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <div class="text-2xl font-bold text-accent-300 drop-shadow-lg">3</div>
+                <div class="text-gray-300 text-sm">Categories</div>
+            </div>
+            <div class="text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <div class="text-2xl font-bold text-accent-300 drop-shadow-lg">100%</div>
+                <div class="text-gray-300 text-sm">Organic</div>
+            </div>
+            <div class="text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <div class="text-2xl font-bold text-accent-300 drop-shadow-lg">24/7</div>
+                <div class="text-gray-300 text-sm">Support</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Filter Tabs -->
+        <div class="flex justify-center mb-12" x-data="{ activeTab: 'all' }">
+            <div class="bg-gray-100 rounded-full p-1 flex space-x-1">
+                <button @click="activeTab = 'all'" 
+                        :class="activeTab === 'all' ? 'bg-white text-primary-600 shadow-md' : 'text-gray-600 hover:text-primary-600'"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-200">
+                    All Products
+                </button>
+                <button @click="activeTab = 'fertilizers'" 
+                        :class="activeTab === 'fertilizers' ? 'bg-white text-primary-600 shadow-md' : 'text-gray-600 hover:text-primary-600'"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-200">
+                    Fertilizers
+                </button>
+                <button @click="activeTab = 'soil'" 
+                        :class="activeTab === 'soil' ? 'bg-white text-primary-600 shadow-md' : 'text-gray-600 hover:text-primary-600'"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-200">
+                    Soil Care
+                </button>
+                <button @click="activeTab = 'pest'" 
+                        :class="activeTab === 'pest' ? 'bg-white text-primary-600 shadow-md' : 'text-gray-600 hover:text-primary-600'"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-200">
+                    Pest Control
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for product in products %}
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl card-hover border border-gray-100">
+                <!-- Product Image -->
+                <div class="h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {% if product.category == 'Fertilizers' %}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        {% elif product.category == 'Soil Care' %}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        {% else %}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                        {% endif %}
+                    </svg>
+                </div>
+                
+                <!-- Product Content -->
+                <div class="p-6">
+                    <!-- Category Badge -->
+                    <div class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                        {{ product.category }}
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">{{ product.name }}</h3>
+                    <p class="text-gray-600 mb-4">{{ product.description }}</p>
+                    
+                    <!-- Features -->
+                    <div class="mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            {% for feature in product.features %}
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">{{ feature }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <!-- Price and CTA -->
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-primary-600">${{ "%.2f"|format(product.price) }}</span>
+                            <span class="text-gray-500 text-sm">/unit</span>
+                        </div>
+                        <button class="bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600 transform hover:scale-105 transition-all duration-200 font-medium">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-primary-600 hover:to-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                Load More Products
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold font-serif text-gray-900 mb-6">
+                Why Choose Our <span class="gradient-text">Products</span>?
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Every product is carefully formulated and tested to ensure maximum effectiveness and environmental safety.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Certified Organic</h3>
+                <p class="text-gray-600">All products are USDA certified organic with no harmful chemicals.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Fast Acting</h3>
+                <p class="text-gray-600">See visible results within days of application.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Eco-Friendly</h3>
+                <p class="text-gray-600">Environmentally safe formulations that protect ecosystems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl lg:text-5xl font-bold font-serif mb-6">
+            Need Help Choosing?
+        </h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+            Our agricultural experts are here to help you select the perfect products for your specific needs.
+        </p>
+        <button class="bg-white text-primary-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+            Get Expert Consultation
+        </button>
+    </div>
+</section>
+{% endblock %}
